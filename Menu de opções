@@ -1,0 +1,33 @@
+name = input("Qual seu nome: ")
+idade = input("Qual a sua idade? ")
+
+if int(idade) >= 18:
+    escolha = input(name + ", você quer alguma bebida? (Digite sim ou não): ")
+
+    if escolha.lower() == "sim":
+        
+        opcoes = ["Vodka c/ energético", "Red Label c/ energético", "Caipirinha", "White Horse c/ energético"]
+
+        print(name + ", escolha uma das opções a seguir:")
+        for i, opcao in enumerate(opcoes, 1):
+            print(f"{i}. {opcao}")
+
+                escolha = input(name + ", digite o número da opção desejada: ")
+
+        if escolha.isdigit():
+            escolha = int(escolha)
+            if 1 <= escolha <= len(opcoes):
+                opcao_escolhida = opcoes[escolha - 1]
+                print(f"Você escolheu: {opcao_escolhida}")
+            else:
+                print(name + ", escolha inválida. Por favor, digite um número dentro do intervalo.")
+        else:
+            print(name + ", entrada inválida. Por favor, digite um número.")
+    elif escolha.lower() == "não":
+        print(name + ", você não deseja uma bebida.")
+    else:
+        print(name + " Opção inválida. Por favor, digite 'sim' ou 'não'.")
+else:
+    print(name + ", você não é maior de idade!")
+
+print("FIM")
