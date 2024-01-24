@@ -1,3 +1,6 @@
+1º O projeto inicial era apenas fazer um cardápio para escolhas
+2° Conforme fui trabalhando no projeto adicionei perguntas para os clientes como se fosse um garçom ou uma IA.
+
 name = input("Qual seu nome: ")
 idade = input("Qual a sua idade? ")
 
